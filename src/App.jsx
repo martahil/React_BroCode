@@ -17,6 +17,7 @@ function App() {
 
 export default App*/
 
+/* 2)
 import Card from './Card.jsx'
 
 function App() {
@@ -31,4 +32,18 @@ function App() {
   
 }
 
+export default App*/
+
+//1. EXTERNAL
+//2. MODULES
+//3. INLINE
+
+import Button from './Button.jsx'
+
+function App() {
+  return(<><Button/></>);  
+}
+
 export default App
+
+
