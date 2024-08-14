@@ -132,7 +132,7 @@ function MyComponent(){
 
 export default MyComponent*/
 
-/* 12) */
+/* 12) 
 
 function MyComponent(){
     const [car, setCar] = useState({year: 2024, make: "Ford", model: "Mustang"});
@@ -153,6 +153,39 @@ function MyComponent(){
         <input type="text" value={car.make} onChange={handleMakeChange}/><br />
         <input type="text" value={car.model} onChange={handleModelChange}/><br />
         </div>);
+}
+
+export default MyComponent*/
+
+/* 13)*/ 
+
+function MyComponent(){
+    const [foods, setFoods] = useState(["Apple", "Orange", "Banana"]);
+
+    function handleAddFood(){
+        const newFood = document.getElementById('foodInput').value;
+        document.getElementById('foodInput').value = "";
+
+        setFoods(f => [...f, newFood]);
+    }
+    function handleRemoveFood(index){
+        setFoods(foods.filter((_, i) => i !== index)); //_ is uded for a parameter if you want to indicate that the parameter being past to the function is ignored
+    }
+
+    return(<div>
+        <h2>List of Food</h2>
+        <ul>
+            {foods.map((food, index) => 
+            <li key={index} onClick={() => handleRemoveFood(index)}>
+                {food}
+            </li>)}
+        </ul>
+        <input type="text" id="foodInput" placeholder="Enter food name"/>
+        <button onClick={handleAddFood}>
+            Add Food
+        </button>
+
+    </div>);
 }
 
 export default MyComponent
