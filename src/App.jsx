@@ -89,7 +89,7 @@ function App() {
 
 export default App*/
 
-/* 6)*/ 
+/* 6) 
 import List from "./List.jsx";
 
 function App() {
@@ -108,12 +108,26 @@ function App() {
 
   return(
     <>
-      {/*<List items={fruits} category="Fruits"/>*/}
-      {/*fruits.length > 0 ? <List items={fruits} category="Fruits"/> : null*/}
+      {//<List items={fruits} category="Fruits"/>}
+      {//fruits.length > 0 ? <List items={fruits} category="Fruits"/> : null}
       {fruits.length > 0 && <List items={fruits} category="Fruits"/>}
       {vegetables.length > 0 ? <List items={vegetables} category="Vegetables"/> : null}
 
     </>
+  ); 
+}
+
+export default App*/
+
+/* 7)*/ 
+import Button from "./Button.jsx";
+import ProfilePicture from "./ProfilePicture.jsx";
+
+function App() {  
+
+  return(       
+    //<Button/>
+    <ProfilePicture/>
   ); 
 }
 
