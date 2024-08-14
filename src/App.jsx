@@ -133,7 +133,7 @@ function App() {
 
 export default App*/ 
 
-/* 8) & 9)*/
+/* 8) & 9)
 import MyComponent from "./MyComponent.jsx";
 import Counter from "./Counter.jsx";
 
@@ -145,7 +145,20 @@ function App() {
   ); 
 }
 
+export default App*/
+
+/* 10)*/ 
+import ColorPicker from "./ColorPicker.jsx"
+
+function App() {  
+
+  return(      
+    <ColorPicker/>
+  ); 
+}
+
 export default App
+
 
 
 
