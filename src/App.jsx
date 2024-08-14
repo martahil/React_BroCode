@@ -147,13 +147,25 @@ function App() {
 
 export default App*/
 
-/* 10)*/ 
+/* 10)
 import ColorPicker from "./ColorPicker.jsx"
 
 function App() {  
 
   return(      
     <ColorPicker/>
+  ); 
+}
+
+export default App*/ 
+
+/* 11)*/ 
+import MyComponent from "./MyComponent.jsx"
+
+function App() {  
+
+  return(      
+    <MyComponent/>
   ); 
 }
 

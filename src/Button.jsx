@@ -11,7 +11,7 @@
     return(<button style={styles}>Click me</button>);
 }
 
-export default <Button></Button>*/ 
+export default Button*/ 
 
 /* 7)*/ 
 

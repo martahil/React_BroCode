@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
-function MyComponent(){
-    /*const [name, setName] = useState('Guest');
+/*function MyComponent(){
+    const [name, setName] = useState('Guest');
     const [age, setAge] = useState(0);
     const [isEmployed, setIsEmployed] = useState(false);
 
@@ -31,7 +31,7 @@ function MyComponent(){
         <button onClick={toggleEmployedstatus}>Toggle Status</button>
     </div>);*/
 
-    const [name, setName] = useState("Guest");
+    /*const [name, setName] = useState("Guest");
     const [quantity, setQuantity] = useState(1);
     const [comment, setComment] = useState("");
     const [payment, setPayment] = useState("");
@@ -73,6 +73,7 @@ function MyComponent(){
                 <option value="Visa">Visa</option>
                 <option value="Mastercard">Mastercard</option>
                 <option value="Giftcard">Giftcard</option>
+                
             </select>
             <p>Payment: {payment}</p>
 
@@ -95,6 +96,38 @@ function MyComponent(){
         </div>
     );
 
+}
+
+export default MyComponent*/
+
+/* 11)*/
+
+function MyComponent(){
+    const [count, setCount] = useState(0);
+
+    const increment = () => {
+        setCount(c => c+ 1); //"c" represent the previous count (and not the count)
+        setCount(c => c+ 1);
+        setCount(c => c+ 1); //with these three lines, it will increase by 3 times
+    }
+
+    const decrement = () => {
+        setCount(c => c - 1);
+        setCount(c => c - 1);
+        setCount(c => c - 1);
+    }
+
+    const reset = () => {
+        setCount(0);
+        //setCount(c => c = 0); //here we won't need the previous state, so the updater function is unnecessary
+    }
+
+    return(<div className="counter-container">
+        <p className="count-display">{count}</p>
+        <button className="counter-button" onClick={decrement}>Drecrement</button>
+        <button className="counter-button" onClick={reset}>Reset</button>
+        <button className="counter-button" onClick={increment}>Increment</button>
+    </div>);
 }
 
 export default MyComponent
