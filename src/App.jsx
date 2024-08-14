@@ -159,7 +159,7 @@ function App() {
 
 export default App*/ 
 
-/* 11)*/ 
+/* 11) 12) */
 import MyComponent from "./MyComponent.jsx"
 
 function App() {  
@@ -170,6 +170,8 @@ function App() {
 }
 
 export default App
+
+
 
 
 
