@@ -171,11 +171,23 @@ function App() {
 
 export default App */
 
-/* 15)*/
+/* 15)
 import ToDoList from "./ToDoList.jsx"
 
 function App() {
   return(<ToDoList />)
+}
+
+export default App*/
+
+/* 16)*/
+import MyComponent from "./MyComponent.jsx"
+
+function App() {  
+
+  return(      
+    <MyComponent/>
+  ); 
 }
 
 export default App

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+//import React, {useState} from "react";
 
 /*function MyComponent(){
     const [name, setName] = useState('Guest');
@@ -189,7 +189,7 @@ function MyComponent(){
 
 export default MyComponent*/
 
-/* 14)*/ 
+/* 14) 
 function MyComponent(){
     const [cars, setCars] = useState([]);
     const [carYear, setCarYear] = useState(new Date().getFullYear());
@@ -242,6 +242,74 @@ function MyComponent(){
             <button onClick={handleAddCar}>Add Car</button>
         </div>
     );
+}
+
+export default MyComponent*/
+
+/* 16) */
+import React, {useState, useEffect} from "react";
+
+function MyComponent(){
+
+    //const [count, setCount] = useState(0);
+    //const [color, setColor] = useState('green');
+
+    /*useEffect(() => {
+        document.title = `Count: ${count}`;
+    });*/
+    /*useEffect(() => {
+        document.title = `My Counter Program`;
+    }, []);*/
+    /*useEffect(() => {
+        document.title = `Count: ${count}`;
+    }, [count]);*/
+    /*useEffect(() => {
+        document.title = `Count: ${count} ${color}`;
+    }, [count, color]);*/
+
+    /*function addCount(){
+        setCount(c => c + 1);
+    }
+
+    function subtractCount(){
+        setCount(c => c - 1);
+    }
+
+    function changeColor(){
+        setColor(c => c === "green" ? "red" : "green");
+    }*/
+
+    const [width, setWidth] = useState(window.innerWidth);
+    const [heigth, setHeigth] = useState(window.innerHeight);
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+        console.log("EVENT LISTENER ADDED");
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            console.log("EVENT LISTENER REMOVED");
+        }
+    }, []);  
+
+    useEffect(() => {
+        document.title = `Size:${width} X ${heigth}`;
+    }, [width, heigth]);
+
+    function handleResize(){
+        setWidth(window.innerWidth);
+        setHeigth(window.innerHeight);
+    }
+
+    return (<>
+        {/*<p style={{color: color}}>Count: {count}</p>
+        <button onClick={addCount}>Add</button>
+        <button onClick={subtractCount}>Subtract</button><br />
+        <button onClick={changeColor}>Change Color</button>*/}
+
+        <p>Window Width: {width}px</p>
+        <p>Window Heigth: {heigth}px</p>
+    </>);
 }
 
 export default MyComponent
