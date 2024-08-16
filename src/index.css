@@ -243,7 +243,7 @@ li{
   margin-left: 10px;
 }*/
 
-/* 17) */
+/* 17) 
 body{
   background-image: url(assets/background.jpg);
   background-position: center;
@@ -271,4 +271,10 @@ body{
   font-family: monospace;
   text-align: center;
   text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.75);
+}*/
+
+/* 18) */
+.box{
+  border: 3px solid;
+  padding: 25px;
 }

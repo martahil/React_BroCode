@@ -192,7 +192,7 @@ function App() {
 
 export default App*/
 
-/* 17) */
+/* 17)
 
 import DigitalClock from "./DigitalClock.jsx"
 
@@ -200,6 +200,19 @@ function App() {
 
   return(      
     <DigitalClock/>
+  ); 
+}
+
+export default App */
+
+/* 18) */
+import ComponentA from "./ComponentA.jsx"
+import React from "react";
+
+function App() {  
+
+  return(      
+    <ComponentA/>
   ); 
 }
 
