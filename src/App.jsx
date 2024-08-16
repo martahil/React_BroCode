@@ -180,7 +180,7 @@ function App() {
 
 export default App*/
 
-/* 16)*/
+/* 16)
 import MyComponent from "./MyComponent.jsx"
 
 function App() {  
@@ -190,7 +190,23 @@ function App() {
   ); 
 }
 
+export default App*/
+
+/* 17) */
+
+import DigitalClock from "./DigitalClock.jsx"
+
+function App() {  
+
+  return(      
+    <DigitalClock/>
+  ); 
+}
+
 export default App
+
+
+
 
 
 
