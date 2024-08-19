@@ -218,7 +218,7 @@ function App() {
 
 export default App*/
 
-/* 19) */
+/* 19)
 import MyComponent from "./MyComponent.jsx"
 //import React from "react";
 
@@ -226,6 +226,18 @@ function App() {
 
   return(      
     <MyComponent/>
+  ); 
+}
+
+export default App */
+
+/* 20) */
+import Stopwatch from "./Stopwatch.jsx"
+
+function App() {  
+
+  return(      
+    <Stopwatch/>
   ); 
 }
 
