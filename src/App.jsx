@@ -205,7 +205,7 @@ function App() {
 
 export default App */
 
-/* 18) */
+/* 18) 
 import ComponentA from "./ComponentA.jsx"
 import React from "react";
 
@@ -216,7 +216,21 @@ function App() {
   ); 
 }
 
+export default App*/
+
+/* 19) */
+import MyComponent from "./MyComponent.jsx"
+//import React from "react";
+
+function App() {  
+
+  return(      
+    <MyComponent/>
+  ); 
+}
+
 export default App
+
 
 
 

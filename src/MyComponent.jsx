@@ -246,7 +246,7 @@ function MyComponent(){
 
 export default MyComponent*/
 
-/* 16) */
+/* 16) 
 import React, {useState, useEffect} from "react";
 
 function MyComponent(){
@@ -277,7 +277,7 @@ function MyComponent(){
 
     function changeColor(){
         setColor(c => c === "green" ? "red" : "green");
-    }*/
+    }
 
     const [width, setWidth] = useState(window.innerWidth);
     const [heigth, setHeigth] = useState(window.innerHeight);
@@ -302,14 +302,76 @@ function MyComponent(){
     }
 
     return (<>
-        {/*<p style={{color: color}}>Count: {count}</p>
-        <button onClick={addCount}>Add</button>
-        <button onClick={subtractCount}>Subtract</button><br />
-        <button onClick={changeColor}>Change Color</button>*/}
+        {//<p style={{color: color}}>Count: {count}</p>
+        //<button onClick={addCount}>Add</button>
+        //<button onClick={subtractCount}>Subtract</button><br />
+        //<button onClick={changeColor}>Change Color</button>}
 
         <p>Window Width: {width}px</p>
         <p>Window Heigth: {heigth}px</p>
     </>);
 }
 
-export default MyComponent
+export default MyComponent */
+
+/* 19) */
+import React, {useState, useEffect, useRef} from "react";
+
+function MyComponent(){
+
+    //let [number, setNumber] = useState(0);
+    //const ref = useRef(0);
+    //const ref = useRef("Pizza");
+    //const inputRef = useRef(null);
+    const inputRef1 = useRef(null);
+    const inputRef2 = useRef(null);
+    const inputRef3 = useRef(null);
+
+    //console.log(ref);
+
+    useEffect(() => {
+        console.log('COMPONENT RENDERED')
+        //console.log(inputRef);
+    });
+
+    //function handleClick(){
+        //setNumber(n => n + 1);
+        //ref.current++;
+        //console.log(ref.current);
+        //inputRef.current.focus();
+        //inputRef.current.style.backgroundColor = 'yellow';
+    //}
+    function handleClick1(){
+        inputRef1.current.focus();
+        inputRef1.current.style.backgroundColor = 'yellow';
+        inputRef2.current.style.backgroundColor = '';
+        inputRef3.current.style.backgroundColor = '';
+    }
+    function handleClick2(){
+        inputRef2.current.focus();
+        inputRef2.current.style.backgroundColor = 'yellow';
+        inputRef1.current.style.backgroundColor = '';
+        inputRef3.current.style.backgroundColor = '';
+    }
+    function handleClick3(){
+        inputRef3.current.focus();
+        inputRef3.current.style.backgroundColor = 'yellow';
+        inputRef1.current.style.backgroundColor = '';
+        inputRef2.current.style.backgroundColor = '';
+    }
+
+    return(
+        <div>
+            <button onClick={handleClick1}>Click me 1!</button>
+            <input ref={inputRef1}/>
+
+            <button onClick={handleClick2}>Click me 2!</button>
+            <input ref={inputRef2}/>
+
+            <button onClick={handleClick3}>Click me 3!</button>
+            <input ref={inputRef3}/>
+        </div>
+    );
+}
+
+export default MyComponent;
